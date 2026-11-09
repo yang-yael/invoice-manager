@@ -1,0 +1,43 @@
+# ===== 隐私：真实发票数据永不入库 =====
+uploads/
+outputs/
+data/
+windows_package/uploads/
+windows_package/outputs/
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+
+# 真实报销表（发票模板.xlsx 是空白模板，白名单放行）
+*.xlsx
+!发票模板.xlsx
+*.xls
+*.csv
+
+# ===== 密钥与配置 =====
+.env
+.env.*
+!.env.example
+
+# ===== 打包产物 =====
+*.zip
+*.tar.gz
+*.crdownload
+windows_package/tools/poppler/
+windows_package/tools/tesseract/
+dist/
+build/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ===== 系统 =====
+.DS_Store
+Thumbs.db

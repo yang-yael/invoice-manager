@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+uploads/
+outputs/
+data/
+windows_package/
+*.zip
+*.crdownload

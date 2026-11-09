@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: invoice-manager
+    env: docker
+    plan: starter
+    disk:
+      name: invoice-data
+      mountPath: /app/data
+      sizeGB: 10
+    envVars:
+      - key: INVOICE_CLOUD
+        value: "1"
+      - key: INVOICE_DATA_DIR
+        value: /app/data
+      - key: INVOICE_TEMPLATE
+        value: /app/发票模板.xlsx

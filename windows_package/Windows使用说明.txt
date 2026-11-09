@@ -1,0 +1,27 @@
+发票自动整理 Windows 测试包
+
+一、如果目标电脑没有 Python
+1. 需要先在任意一台 Windows 电脑上运行一次：构建Windows免安装EXE.bat
+2. 构建成功后会生成 web_app.exe
+3. 之后把整个“发票自动整理-Windows测试包”文件夹发给其他电脑
+4. 其他电脑双击：打开发票自动整理.bat
+
+二、如果只是临时测试，目标电脑有 Python
+1. 双击：打开发票自动整理.bat
+2. 或在命令行运行：py -3 invoice_system\web_app.py
+
+三、目录说明
+发票模板.xlsx 必须放在本文件夹根目录。
+上传的原始文件会保存到 uploads。
+结果会保存到 outputs。
+同一个“总报销批次名称”会持续汇总，最终按购买方公司分文件夹导出。
+
+四、PDF 识别工具
+电子 PDF 如果识别不到正文，需要把 Poppler 放到：
+tools\poppler\
+
+常见可执行文件位置之一：
+tools\poppler\Library\bin\pdftotext.exe
+tools\poppler\Library\bin\pdftoppm.exe
+
+扫描件或图片 OCR 需要额外放 Tesseract，这个测试包先不内置。
